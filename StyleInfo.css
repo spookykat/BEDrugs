@@ -1,0 +1,15 @@
+th{
+    background-color: #d351fa;
+    height: 0.5cm;
+    width: auto;
+}
+
+td{
+    height: 0.5cm;
+    width: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
