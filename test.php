@@ -8,6 +8,12 @@
 </head>
 <body>
     <?php
+    function sanitized_input($input) {
+        $input = trim($input);
+        $input = stripslashes($input);
+        $input = htmlspecialchars($input);
+        return $input;
+    }
     $servername = '127.0.0.1';
     $username = 'root';
     $password = 'usbw';
@@ -30,12 +36,13 @@
     }
 
     if (isset($_POST['submit'])) {
-        $name = $_POST['name'];
-        $active = $_POST['active'];
-        $location = $_POST['location'];
-        $date = $_POST['date'];
+        $name = sanitized_input($_POST['name']);
+        $shape = sanitized_input($_POST['shape']);
+        $active = sanitized_input($_POST['active']);
+        $location = sanitized_input($_POST['location']);
+        $date = sanitized_input($_POST['date']);
 
-        $sql = "INSERT INTO pills (Name, Active_Ingredient, Location, Date) VALUES ('$name', '$active', '$location', '$date') ";
+        $sql = "INSERT INTO pills (Name, Shape, Active_Ingredient, Location, Date) VALUES ('$name', '$shape', '$active', '$location', '$date') ";
 
         if (mysqli_query($conn, $sql)) {
             echo "New record created successfully";
@@ -47,7 +54,13 @@
     mysqli_close($conn);
     ?>
     <form action="test.php" method="post">
-        <input type="text" name="name" placeholder="Name">
+        <label for="name">Name:</label>
+        <select name="name" id="name">
+            <option value="XTC">XTC</option>
+            <option value="2C-B">2C-B</option>
+            <option value="2C-E">2C-E</option>
+        </select>
+        <input type="text" name="shape" placeholder="Shape">
         <input type="text" name="active" placeholder="Active Ingredient">
         <input type="text" name="location" placeholder="Location">
         <input type="date" name="date" placeholder="Date">
