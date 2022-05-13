@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 09 mei 2022 om 13:18
+-- Genereertijd: 13 mei 2022 om 08:02
 -- Serverversie: 5.6.13
 -- PHP-versie: 5.4.17
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `pills` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(200) NOT NULL,
   `Active_Ingredient` varchar(200) NOT NULL,
-  `Location` int(250) NOT NULL,
+  `Location` varchar(250) NOT NULL,
   `Date` date NOT NULL,
   `Photo` varchar(1000) NOT NULL,
   PRIMARY KEY (`Id`)
