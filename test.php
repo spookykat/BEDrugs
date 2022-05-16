@@ -11,6 +11,7 @@
     function sanitized_input($input) {
         $input = trim($input);
         $input = stripslashes($input);
+        $input = mysql_real_escape_string($input);
         $input = htmlspecialchars($input);
         return $input;
     }
@@ -45,7 +46,7 @@
         $sql = "INSERT INTO pills (Name, Shape, Active_Ingredient, Location, Date) VALUES ('$name', '$shape', '$active', '$location', '$date') ";
 
         if (mysqli_query($conn, $sql)) {
-            echo "New record created successfully";
+            echo "New record created successfully" . "</br>";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
