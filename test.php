@@ -15,19 +15,23 @@
         $input = htmlspecialchars($input);
         return $input;
     }
+    #Connection Details
     $servername = '127.0.0.1';
     $username = 'root';
     $password = 'usbw';
     $dbname = 'drugs';
 
+    #Make Connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    #SQL Query for data
     $query = "SELECT * FROM pills";
     $result = mysqli_query($conn, $query);
 
+    #Data to screen
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo $row["Id"] . " " . $row["Name"] . " ". $row["Location"] . "<br>";
@@ -36,6 +40,7 @@
         echo "0 results";
     }
 
+    #If submitted upload data to database
     if (isset($_POST['submit'])) {
         $name = sanitized_input($_POST['name']);
         $shape = sanitized_input($_POST['shape']);
@@ -51,7 +56,7 @@
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
     }
-
+    #Close connection
     mysqli_close($conn);
     ?>
     <form action="test.php" method="post">
