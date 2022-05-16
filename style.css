@@ -11,6 +11,28 @@
     background-size: cover;
     position: relative;
 }
+th{
+    background-color: #d351fa;
+    height: 0.5cm;
+    width: auto;
+}
+
+td{
+    height: 0.5cm;
+    width: auto;
+}
+
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 15cm;
+    height: 20cm;
+}
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 nav{
     display: flex;
     padding: 2% 6%;
