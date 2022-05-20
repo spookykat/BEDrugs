@@ -113,3 +113,10 @@ body {
       display: block;
     }
   }
+  .card>img{
+    width:auto; 
+    max-height:500px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+  }
