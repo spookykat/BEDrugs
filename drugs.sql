@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 16 mei 2022 om 12:24
+-- Genereertijd: 20 mei 2022 om 07:25
 -- Serverversie: 5.6.13
 -- PHP-versie: 5.4.17
 
@@ -35,9 +35,13 @@ CREATE TABLE IF NOT EXISTS `pills` (
   `Active_Ingredient` varchar(200) NOT NULL,
   `Location` varchar(250) NOT NULL,
   `Date` date NOT NULL,
+  `Note` varchar(1000) NOT NULL,
+  `Good` tinyint(1) NOT NULL,
   `Photo` varchar(1000) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+  PRIMARY KEY (`Id`),
+  KEY `Id` (`Id`),
+  KEY `Id_2` (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
