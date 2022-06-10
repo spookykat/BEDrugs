@@ -12,11 +12,10 @@
                 <a href="index.html"><img src="https://www.logomaker.com/api/main/images/1j+ojVNGOMkX9W2+J1iwiGKhh...CBpRJOmAiIiWcqL2VE9AlpkiQvgfZr...A=="></a>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="About.html">ABOUT</a></li>
-                        <li><a href="Pills.html">PILLS</a></li>
-                        <li><a href="Powder.html">POWDER</a></li>
-                        <li><a href="Grass.html">GRASS</a></li>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="About.php">ABOUT</a></li>
+                        <li><a href="Pills.php">PILLS</a></li>
+                        <li><a href="Submit.php">SUBMIT PILL</a></li>
                     </ul>
                 </div>
             </nav>
