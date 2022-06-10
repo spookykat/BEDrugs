@@ -36,7 +36,6 @@
                   <p class="title">CEO & Founder</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                   <p>jane@example.com</p>
-                  <p><button class="button">Contact</button></p>
                 </div>
               </div>
             </div>
@@ -49,7 +48,6 @@
                   <p class="title">Art Director</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                   <p>mike@example.com</p>
-                  <p><button class="button">Contact</button></p>
                 </div>
               </div>
             </div>
@@ -62,7 +60,6 @@
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                   <p>john@example.com</p>
-                  <p><button class="button">Contact</button></p>
                 </div>
               </div>
             </div>
@@ -74,7 +71,6 @@
                     <p class="title">Art Director</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                     <p>mike@example.com</p>
-                    <p><button class="button">Contact</button></p>
                   </div>
                 </div>
               </div>
