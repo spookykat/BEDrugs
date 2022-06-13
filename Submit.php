@@ -33,8 +33,10 @@
         $active = sanitized_input($_POST['active']);
         $location = sanitized_input($_POST['location']);
         $date = sanitized_input($_POST['date']);
+        $note = sanitized_input($_POST['note']);
+        $good = sanitized_input($_POST['good']);
 
-        $sql = "INSERT INTO pills (Name, Shape, Active_Ingredient, Location, Date, Note, Good, Photo) VALUES ('$name', '$shape', '$active', '$location', '$date', '$note', '$good') ";
+        $sql = "INSERT INTO pills (Name, Shape, Active_Ingredient, Location, Date, Note, Good) VALUES ('$name', '$shape', '$active', '$location', '$date', '$note', '$good') ";
 
         if (mysqli_query($conn, $sql)) {
             echo "New record created successfully" . "</br>";
